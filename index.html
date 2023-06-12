@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Funcinal| calculater</title>
+    <link rel="stylesheet" href="assests/css/bootstrap.min.css">
+</head>
+<body>
+<style>
+    #card {
+        border-width: 3px; /* Modify this value to adjust the border size */
+        border-color: #51585e;
+    }
+    .form-control{
+        border-color: #6c757d;
+    }
+    #btneq{
+        border-color:#2c3034;
+        border-width: 3px;
+    }
+</style>
+</head>
+
+
+<!--To display a card at the center of the screen, you can use a combination of CSS classes and inline styles. Here's an example of how you can center a card horizontally and vertically on the screen:-->
+
+
+<div class="container-fluid my-sm-5">
+
+    <div class="d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+
+        <div id="card" class="card mx-lg-5 " style="width: 30rem;">
+            <div class="bg-secondary card-header text-white" style="font-size: 10px">
+                <h1 class="text-center">Calculator</h1></div>
+            <div class="row p-3 mt-3 ">
+                <div class="col-12" >
+
+                    <input type="text" class="form-control" id="output" placeholder="0"  >
+
+                </div>
+            </div>
+            <section class="row p-2 mt-1 ">
+                <div class="form-group col-2">
+                    <button  onclick="display('1')" type="button" class="btn btn-primary btn-lg col-12">1</button>
+                </div>
+                <div class="form-group col-2">
+                    <button  onclick="display('2')"  type="button" class="btn btn-secondary btn-lg col-12">2</button>
+                </div>
+                <div class="form-group col-2">
+                    <button onclick="display('3')" type="button" class="btn btn-success btn-lg col-12">3</button>
+                </div>
+                <div class="form-group col-3">
+                    <button  onclick="display('+')"  type="button" class="btn btn-danger btn-lg col-12"  id="btnAdd">+</button>
+                </div>
+                <div class="form-group col-3">
+                    <button onclick="del()" type="button" class="btn btn-warning btn-lg col-12 clear" >C</button>
+                </div>
+            </section>
+            <section class="row p-2 mt-2">
+                <div class="col-2">
+                    <button onclick="display('4')" type="button" class="btn btn-primary btn-lg col-12">4</button>
+                </div>
+                <div class="col-2">
+                    <button onclick="display('5')" type="button" class="btn btn-secondary btn-lg col-12">5</button>
+                </div>
+                <div class="col-2">
+                    <button onclick="display('6')" type="button" class="btn btn-success btn-lg col-12">6</button>
+                </div>
+                <div class="col-3">
+                    <button onclick="display('-')" type="button" class="btn btn-danger btn-lg col-12"  id="btnMinus">-</button>
+                </div>
+                <div class="col-3">
+                    <button onclick="display('*')" type="button" class="btn btn-danger btn-lg col-12 " id="btnMultiply">*</button>
+                </div>
+
+            </section>
+            <section class="row p-2 mt-2">
+                <div class=" col-2">
+                    <button onclick="display('7')" type="button" class="btn btn-primary btn-lg col-12">7</button>
+                </div>
+                <div class=" col-2">
+                    <button onclick="display('8')" type="button" class="btn btn-secondary btn-lg col-12">8</button>
+                </div>
+                <div class=" col-2">
+                    <button onclick="display('9')" type="button" class="btn btn-success btn-lg col-12">9</button>
+                </div>
+                <div class=" col-3">
+                    <button onclick="display('/')" type="button" class="btn btn-danger btn-lg col-12">/</button>
+                </div>
+                <div class="col-3">
+                    <button onclick="Calculate()"  type="button" class="btn btn-danger btn-lg col-12 equals"  >=</button>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+
+<script src="assests/js/bootstrap.min.js"></script>
+<script src="assests/js/calculator.js"></script>
+
+</body>
+</html>
